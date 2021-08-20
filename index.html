@@ -1,60 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Survey Form</title>
   </head>
   <body>
     <main class="container">
-      <h1>Cadastro de DEVs</h1>
-      <h3>Complete suas Informações</h3>
-      <form action="">
+      <h1 id="title">Cadastro de DEVs</h1>
+      <p id="description">Complete suas Informações</p>
+      <form action="" id="survey-form">
         <div class="input-field">
-          <input
+          <label for="name" id="name-label"></label
+          ><input
             type="text"
-            name="nome"
-            id="nome"
+            name="name"
+            id="name"
             placeholder="Digite seu nome"
+            required
           />
-          <div class="underline"></div>
+          <div class="underline"></div></div>
+          <div class="input-field">
+            <label for="email" id="email-label"></label
+            ><input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Digite seu email"
+              required
+            />
+            <div class="underline"></div>
+          </div>
+
+          <div class="input-field">
+            <label for="number" id="number-label"></label
+            ><input
+              type="number"
+              name="number"
+              id="number"
+              placeholder="Idade"
+              min="18"
+              max="60"
+              required
+            />
+            <div class="underline"></div>
+          </div>
         </div>
-        <div class="input-field">
-          <input
-            type="text"
-            name="sobrenome"
-            id="sobrenomenome"
-            placeholder="Digite seu sobrenome"
-          />
-          <div class="underline"></div>
-        </div>
-        <div class="input-field">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Digite seu email"
-          />
-          <div class="underline"></div>
-        </div>
-        <h3>De qual lado da aplicação você desenvolve?</h3>
+        <p>De qual lado da aplicação você desenvolve?</p>
         <div class="input-radio">
           <input type="radio" name="devweb" value="frontend" checked />Front-end
           <input type="radio" name="devweb" value="backend" />Back-end
           <input type="radio" name="devweb" value="fullstack" />Fullstack
         </div>
-        <h3>Senioridade:</h3>
+        <p>Senioridade:</p>
         <div class="select">
-          <select id="senioridade">
+          <select id="dropdown">
             <option selected disabled value="">Selecione</option>
             <option>Junior</option>
             <option>Pleno</option>
             <option>Senior</option>
           </select>
         </div>
-        <h3>Selecione as tecnologias que utiliza:</h3>
+        <p>Selecione as tecnologias que utiliza:</p>
         <div class="checkbox">
           <input
             type="checkbox"
@@ -106,7 +115,7 @@
           />
           <label for="tecnologia7">Java</label>
         </div>
-        <h3>Conte um pouco da sua experiência:</h3>
+        <p>Conte um pouco da sua experiência:</p>
         <div class="text">
           <textarea
             id="experiencia"
@@ -114,7 +123,7 @@
             placeholder="Digite aqui"
           ></textarea>
         </div>
-        <input type="submit" value="Concluído" />
+        <input type="submit" id="submit" value="Concluído" />
       </form>
     </main>
   </body>
